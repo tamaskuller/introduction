@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <h:head >
+        <title>Introduction Page</title>
+        <link rel="stylesheet" href="resources/css/default.css"></link>
+        <script type="text/javascript" src="scripts/indexfunct.js"></script>        
+    </h:head>    
+
+    <h:body style="height: 100% ; background-color: lightskyblue">
+        <p:layout fullPage="true" style="background-color: aqua">                                    
+            <p:layoutUnit position="north" resizable="false" size="20%" minSize="130" >                                                                                               
+                <p:panel class="panScroll" style="margin: auto auto;background-image: url(pictures/trees1.jpg);   width: 90% ;height: 85%" >                                        
+                    <h:panelGroup id="north" style="position: absolute; top: 0%; width: 55%" >
+                        <ui:include src="/subpages/north.xhtml"/>                                                                                                                
+                    </h:panelGroup>                                                               
+                    <h:form id="PictureShow" style="width: 100%" onclick="javascript:setPictureShowHRefs(#{indexBean.readMeOK})">
+                        <p:dock id="dock" position="top" maxWidth="10" itemWidth="100" proximity="90"  halign="right">                    
+                            <p:menuitem id="workplaces" title="VVV" value="Workplaces" style="font-size: medium; background-color: white" icon="/pictures/wp.jpeg" action="#{indexBean.startApps()}" update=":north :center" ></p:menuitem>                                        
+                            <p:menuitem id="travels" value="Travels" style="font-size: medium; background-color: white" icon="/pictures/businesstrip.jpg" action="#{indexBean.startApps()}" update=":north :center"></p:menuitem>                            
+                        </p:dock>
+                    </h:form>                                        
+                </p:panel>                   
+            </p:layoutUnit>
+            <p:layoutUnit position="west" resizable="false" size="20%" minSize="180" style="background-color: lightskyblue;align-content: center" >                            
+                <h:form id="intro" title="Please choose one" style="text-align:center">   
+                        <p:menu toggleable="true" style="width: 95%" >  
+                            <p:menuitem value="Brief intro" action="#{indexBean.setCenterMenu(0)}" update=":center" style="color: darkblue;font-weight: bolder; font-size: x-large "></p:menuitem>                                                
+                            <p:submenu id="plans" expanded="false" label="Today and Plans">                                        
+                                <p:menuitem value="Who I am" style="color: blue" action="#{indexBean.setCenterMenu(1)}" update=":center"></p:menuitem>                            
+                                <p:menuitem value="Motivation" style="color: blue" action="#{indexBean.setCenterMenu(2)}" update=":center"></p:menuitem>                            
+                            </p:submenu>
+                            <p:submenu id="path" expanded="false" label="Career Path">                                        
+                                <p:menuitem value="Education" action="#{indexBean.setCenterMenu(3)}" update=":center"></p:menuitem>                            
+                                <p:menuitem value="Positions" action="#{indexBean.setCenterMenu(4)}" update=":center"></p:menuitem>                            
+                                <p:menuitem value="Projects" action="#{indexBean.setCenterMenu(5)}" update=":center"></p:menuitem>                            
+                            </p:submenu>        
+                            <p:submenu id="download" expanded="false" label="Apps &amp; Downloads" >            
+                                <p:menuitem id="pictShow" value="PictureShow App&amp;Code" style="color: blue" action="#{indexBean.setCenterMenu(6)}" update=":center"></p:menuitem>
+                                <p:menuitem id="JREDown" value="JRE Readme and Download" action="#{indexBean.menuJREOpen()}" update=":center :north"></p:menuitem>                                                                                            
+                                <p:menuitem id="Webpage" url="#" target="_blank" value="Webpage code download" onclick="return getFilesURLsQ('Are you sure to download the Webpage source code?')"></p:menuitem>                                                               
+                                <p:menuitem id="CV" url="#" value="CV download" onclick="return getFilesURLsQ('Are you sure to download the CV in docx?')"></p:menuitem>                                                               
+                            </p:submenu>
+                        </p:menu>                        
+                    </h:form>                    
+            </p:layoutUnit>            
+            <p:layoutUnit position="center" resizable="false" style="align-content: center">
+                    <h:panelGroup id="center" style="width: 100%; height: 100%">
+                        <ui:include src="/subpages/#{indexBean.getCenterMenuName()}"/>                                                                                                                           
+                    </h:panelGroup>
+            </p:layoutUnit>            
+        </p:layout>        
+    </h:body>
+</html>
+

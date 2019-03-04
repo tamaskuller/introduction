@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    
+ <script type="text/javascript" src="scripts/indexfunct.js"></script>    
+        
+        <p:panel class="panScroll" style=" width: 85%; height: 85%; margin: auto auto">
+          The PictureShow java application doesn'T have an official certificate (as it's only a home developped app).
+          <br/>
+          The latest security regulations of java doesn't allow to run such self-signed apps without any actions.
+          <br/><br/>
+          Two things can be done (running both doesn't harm either):
+          <form onclick="javascript:getFilesURLsQ(null);"  >
+              
+            <h3>1.) Install java 1.8.11 with "Medium" security level (RECOMMENDED choice):</h3>
+              <a id="jre" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install java 1.8.11?')">
+              Download and Install JRE 1.8.11 using this link</a>                                           
+              <br/>
+                The only v8 allowing Medium security
+                <br/>
+                <br/>
+             <a id="jse" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install medium sec level tool?')">
+                 Change Java security level to Medium (Windows OS only)</a>                                           
+             <br/>
+                 In case 1.8.11 was installed using the link above or before.
+             <br/>
+          <h3>2.) Add this website to Java security exception list:</h3>             
+          <a id="jex" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install exception adding tool?')">
+              Adjust Java security exception list (Windows OS only)</a>                                           
+            <br/>
+            In case when higher v8 java is installed on the PC                       
+          </form>                
+          </p:panel>
+        
+    
+</html>
+

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+
+    <link rel="stylesheet" href="resources/css/default.css"></link>    
+    <script type="text/javascript" src="scripts/indexfunct.js"></script>    
+
+
+    <h1 align="center" style="background-color: white; font-size: x-large"><b>PictureShow Application</b>   </h1>       
+
+    <p:panel class="panScroll" style=" width: 85%; height: 80%;  margin: auto auto">
+
+        <h4 class="colorLarge">Overview</h4>
+        <p>
+            PictureShow is a <b class="colorblue">Java Swing based app</b> using basic features of swing "window" and "component" classes.<br/>
+            The app main functionalities are customly built on top of those.<br/>
+            Some highlights from those <span  class="colorblue">custom features</span> (see detailed list at the bottom Appendix):
+            <ol>
+                <li><span  class="colorblue">Animated, ordered, multi-level, groupped, autosizing / auto-positioning</span> behaviour</li>
+                <li><span  class="colorblue">Show / hide button,  background image</span></li>
+                <li>Design layouts: <span  class="colorblue">add / remove / resize / move </span> pictures, group of pictures, backgrounds.</li>
+                <li>Manage layouts: <span  class="colorblue">new / load / save / delete layouts.</span></li>
+            </ol>
+            The Java core app also manages integration elements to give a fullscale solution:
+            <ol>
+                <li><b class="colorblue">MySQL database</b> behind the scenes to store and handle PictureShow layouts</li>
+                <li><b class="colorblue">Storage for pictures on a webserver or local path</b> (both works automatically based on installation)</li>                
+                <li>Can be <b class="colorblue">run from a usual webpage</b> using JNLP</li>
+            </ol>        
+            <p>
+            You can download the samples from <a href="#showcases" class="colorblue"> below </a> links if direct launch with webstart (JNLP) doesn't work.<br/>
+            And You can download the              
+            <a id="pictShow" href="#" target="_blank" class="linked" onclick="return getFilesURLsQ('Are you sure to download PictureShow source code?')">
+                PictureShow source code</a>                                                                       
+            from GitHub to dig deeper into. <br/>                       
+        </p>
+        
+        </p>
+        <h4 class="colorLarge">What PictureShow can be used for?</h4>                       
+
+        <p>
+            It's a real mini presentation tool (not only a project introducing me as a programmer).<br/>
+            A flexible app to design layouts to show, animate, activate etc. pictures on different level of layers.<br/>
+            Telling stories, roadmaps, family albums, map based journeys etc.                                    
+        </p>
+        <p>
+            <b id="showcases" class="colorblue">The two sample versions </b> (see the icons on the webpage top section) contains:
+            <ol>
+                <li>My <a id="workplaces_bckp" class="linked" href="#" onclick="getFilesURLsQ('Are you sure to download PictureShow My Workplaces app?')" > career "stops" </a> with job positions</li>
+                <li>Countries I've <a id="travels_bckp" class="linked" onclick="getFilesURLsQ('Are you sure to download PictureShow Visits app?')" href="#">visited </a> in my life (not only businesstrips)</li>
+            </ol>
+        </p>
+
+        <p class="medium">
+            <table border="1">               
+                <b><p align="center" class="colorDarkBlueLarger">Main Features - Appendix</p></b>
+                <tbody align="left" valign="top">
+                    <tr align="center"><th style="width: 50%">Basics</th><th style="width: 50%">Extras (Admin Mode)</th></tr>
+                    <tr>
+                        <td>
+                            <b>User Mode</b> (app starts in this mode)
+                            <ol>                                        
+                                <li><b>Animated, ordered</b> show of pictures / picturegroups</li>                
+                                <li><b>AutoShaping / Sizing</b>:</li>                    
+                                &emsp;...elements following the size / position changes of their parents<br/>                                
+                                <li><b>Groupping</b> of components</li>
+                                &emsp;...in so called "PicturePanes" boxes
+                                <li>Button to <b>min /maximize</b> PicturePanes</li>                                
+                                <li><b>Multi-level</b> layered structure of picture-groups </li>                    
+                                &emsp;...picturePanes can contain picturePanes and so on.
+                                &emsp;(the lowest level is always PictureComponents.)    
+                                <li><b>Background image</b> adding possibility</li>                                    
+                                <li>Active reactions on <b>mouse events</b>:<br/>                    
+                                    &emsp;...Show / hide picture groups<br/>
+                                    &emsp;...Bring single pictures to front<br/>
+                                    &emsp;+ see the admin features on the right
+                                </li>                                
+                            </ol>
+                        </td>
+                        <td>                                
+                            <b>Designer mode</b> enabling / using by right-click menu
+                            <ol>
+                                <li><b>Add / remove</b> components (using helping subforms):</li>
+                                &emsp;...Picturepanes: group of pictures<br/>
+                                &emsp;...Single PictureComponents into panes<br/>
+                                &emsp;...Background images
+                                <li><b>Move</b> components (by drag and drop)</li>
+                                <li><b>Resize components</b> (by drag and move mouse)</li>
+                                <li><b>Re-order</b> "PicturePanes" (by double-click)</li>                    
+                                <li>Bordering to help active components / resizing /moving etc </li>
+                                <li><b>Create</b> new empty layout (using subform)</li>
+                                <li><b>Save</b> designed layout to Database (using subform)</li>
+                                <li><b>Load / Delete Database stored layouts</b> (using subform)</li>                                        
+                            </ol>                           
+                        </td>
+                    </tr>                   
+                </tbody>
+            </table>
+        </p>
+
+    </p:panel>
+
+
+</html>
+

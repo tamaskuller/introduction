@@ -1,0 +1,46 @@
+<h2 id="HeaderText" style="text-align: left; position: absolute; bottom: 20%; height: 40%; width: 90%">
+                                Java PictureShow application showcases ->                                   
+                                
+                        </h2>  
+
+<h:outputText id="output" value="valamike" binding="#{indexBean.component}"></h:outputText>
+                <h:message for="output"/>
+                <br/>
+                <h:commandButton value="click me" onclick="#{indexBean.doAction()}" />                
+                
+                
+
+ <p:panel style="position: absolute; left: 5%;background-image: url(pictures/sky2.jpg); background-repeat:  no-repeat; width: 90% ;height: 85%" >                        
+
+
+
+<p:dock id="dock" position="top" maxWidth="10" itemWidth="100" proximity="90" halign="right" >
+</p:dock>
+
+
+
+ </p:panel>                   
+
+
+                <p:commandButton value="push" onclick="#{indexBean.doAction()}" update="PictureShow:test2"></p:commandButton>   
+<p:commandButton value="push" action="#{indexBean.setCenterMenu(0)}"></p:commandButton>   
+
+
+
+<h:form id="PictureShow" style="width: 100%; border: black" >                                                                                                                              
+<p:menu style="position: absolute;right: 10%">                        
+                            <p:menuitem id="travels" value="T" style="font-size: medium; top: auto" icon="/pictures/businesstrip.jpg" url="#" update=":center"></p:menuitem>
+                            <p:menuitem id="workplaces" title="VVV" value="Workplaces" style="font-size: medium" icon="/pictures/wp.jpeg" url="#" ></p:menuitem>            
+                            <p:menuitem id="fun" value="Fun :)" style="font-size: medium" icon="/pictures/holiday.jpg" url="#" action="#{indexBean.setCenterMenu(0)}"></p:menuitem>                            
+                    </p:menu>                    
+
+</h:form>                                   
+
+
+ <c:when test="#{indexBean.readMeRead==false}">
+                                    <ui:include src="/subpages/blank.xhtml"/>                                    
+                                </c:when> 
+
+
+
+<h:form id="PictureShow" style="width: 100%; border: black" onmouseover="javascript:setPictureShowHRefs(#{indexBean.readMeOK})">                                                                                                                                    
