@@ -5,7 +5,7 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
 
-    
+
     <c:if test="#{indexBean.readMeToRead}">
         <h5 align="right" style="background-color: white;opacity: 1; width: fit-content">     
             Please review the security readme below first.
@@ -19,11 +19,11 @@
     <c:if test="#{indexBean.readMeToRead==false}">        
         <h3 id="HeaderText" align="left" style="background-color: white;font-size: x-large;opacity: 0.85; width: fit-content; border: 3px inset lightblue;" >
             Java PictureShow application showcases -> 
-        <c:if test="#{indexBean.readMeOK==true}">
-            <div style="font-size: small; color: black">
-                You can click on any Apps icon. Please run the downloaded JNLP file after to launch it. Thanks.
-            </div>
-        </c:if>
+            <c:if test="#{indexBean.readMeOK==true}">
+                <div style="font-size: small; color: black">
+                    You can click on any Apps icon. Please run the downloaded JNLP file after to launch it. Thanks.
+                </div>
+            </c:if>
 
         </h3>
     </c:if>

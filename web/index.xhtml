@@ -21,9 +21,9 @@
                         <ui:include src="/subpages/north.xhtml"/>                                                                                                                
                     </h:panelGroup>                                                               
                     <h:form id="PictureShow" style="width: 100%" onclick="javascript:setPictureShowHRefs(#{indexBean.readMeOK})">
-                        <p:dock id="dock" position="top" maxWidth="10" itemWidth="100" proximity="90"  halign="right">                    
-                            <p:menuitem id="workplaces" title="VVV" value="Workplaces" style="font-size: medium; background-color: white" icon="/pictures/wp.jpeg" action="#{indexBean.startApps()}" update=":north :center" ></p:menuitem>                                        
-                            <p:menuitem id="travels" value="Travels" style="font-size: medium; background-color: white" icon="/pictures/businesstrip.jpg" action="#{indexBean.startApps()}" update=":north :center"></p:menuitem>                            
+                        <p:dock id="dock" position="top" maxWidth="15" itemWidth="100" proximity="90"  halign="right">                    
+                            <p:menuitem id="workplaces" title="Jobs" value="My Jobs" style="font-size: small; background-color: white" icon="/pictures/career.jpg" action="#{indexBean.startApps()}" update=":north :center" ></p:menuitem>                                        
+                            <p:menuitem id="travels" title="Travels" value="Visited places" style="font-size: small; background-color: white" icon="/pictures/travels2.jpg" action="#{indexBean.startApps()}" update=":north :center"></p:menuitem>                            
                         </p:dock>
                     </h:form>                                        
                 </p:panel>                   

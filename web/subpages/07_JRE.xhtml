@@ -4,37 +4,40 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
-    
- <script type="text/javascript" src="scripts/indexfunct.js"></script>    
-        
-        <p:panel class="panScroll" style=" width: 85%; height: 85%; margin: auto auto">
-          The PictureShow java application doesn'T have an official certificate (as it's only a home developped app).
-          <br/>
-          The latest security regulations of java doesn't allow to run such self-signed apps without any actions.
-          <br/><br/>
-          Two things can be done (running both doesn't harm either):
-          <form onclick="javascript:getFilesURLsQ(null);"  >
-              
+
+    <script type="text/javascript" src="scripts/indexfunct.js"></script>    
+
+    <p:panel class="panScroll" style=" width: 85%; height: 90%; margin: auto auto">
+        The PictureShow java application doesn'T have an official certificate (as it's only a home developped app).
+        <br/>
+        The latest security regulations of java doesn't allow to run such self-signed apps without any actions.
+        <br/><br/>
+        Two things can be done (running both doesn't harm either):
+        <form onclick="javascript:getFilesURLsQ(null);"  >
+
             <h3>1.) Install java 1.8.11 with "Medium" security level (RECOMMENDED choice):</h3>
-              <a id="jre" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install java 1.8.11?')">
-              Download and Install JRE 1.8.11 using this link</a>                                           
-              <br/>
-                The only v8 allowing Medium security
-                <br/>
-                <br/>
-             <a id="jse" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install medium sec level tool?')">
-                 Change Java security level to Medium (Windows OS only)</a>                                           
-             <br/>
-                 In case 1.8.11 was installed using the link above or before.
-             <br/>
-          <h3>2.) Add this website to Java security exception list:</h3>             
-          <a id="jex" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install exception adding tool?')">
-              Adjust Java security exception list (Windows OS only)</a>                                           
+            <a id="jre" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install java 1.8.11?')">
+                Download and Install JRE 1.8.11 using this link</a>                                           
             <br/>
-            In case when higher v8 java is installed on the PC                       
-          </form>                
-          </p:panel>
-        
-    
+            The only v8 allowing Medium security
+            <br/>
+            <br/>
+            <a id="jse" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install medium sec level tool?')">
+                Change Java security level to Medium </a><span class="medium"> (script works on Windows OS only)</span><br/>                                        
+            In case 1.8.11 was installed using the link above or before.
+            <br/>
+            <span style="font-size: small">(Note! This helping file can give false virus alarm. You can use javaconf GUI instead in that case)</span>                 
+            <br/>
+            <h3>2.) Add this website to Java security exception list:</h3>             
+            <a id="jex" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install exception adding tool?')">
+                Adjust Java security exception list </a> <span class="medium">(script works on Windows OS only)</span><br/>
+            In case when higher v8 java is installed on the PC                                   
+            <br/>
+            <span style="font-size: small">(Note! This helping file can give false virus alarm. You can use javaconf GUI instead in that case)</span>
+
+        </form>                
+    </p:panel>
+
+
 </html>
 
