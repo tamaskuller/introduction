@@ -13,47 +13,48 @@
         <script type="text/javascript" src="scripts/indexfunct.js"></script>        
     </h:head>    
 
-    <h:body style="height: 100% ; background-color: lightskyblue">
+    <h:body style="background-color: lightskyblue; align-content: center" onload="getFilesURLsQ()">        
         <p:layout fullPage="true" style="background-color: aqua">                                    
-            <p:layoutUnit position="north" resizable="false" size="20%" minSize="130" >                                                                                               
-                <p:panel class="panScroll" style="margin: auto auto;background-image: url(pictures/trees1.jpg);   width: 90% ;height: 85%" >                                        
-                    <h:panelGroup id="north" style="position: absolute; top: 0%; width: 55%" >
-                        <ui:include src="/subpages/north.xhtml"/>                                                                                                                
-                    </h:panelGroup>                                                               
-                    <h:form id="PictureShow" style="width: 100%" onclick="javascript:setPictureShowHRefs(#{indexBean.readMeOK})">
-                        <p:dock id="dock" position="top" maxWidth="15" itemWidth="100" proximity="90"  halign="right">                    
-                            <p:menuitem id="workplaces" title="Jobs" value="My Jobs" style="font-size: small; background-color: white" icon="/pictures/career.jpg" action="#{indexBean.startApps()}" update=":north :center" ></p:menuitem>                                        
-                            <p:menuitem id="travels" title="Travels" value="Visited places" style="font-size: small; background-color: white" icon="/pictures/travels2.jpg" action="#{indexBean.startApps()}" update=":north :center"></p:menuitem>                            
-                        </p:dock>
-                    </h:form>                                        
-                </p:panel>                   
+            <p:layoutUnit position="north" resizable="false" size="20%" minSize="130" >                                                                                                               
+                <p:panel style=" background-image: url(pictures/trees1.jpg);   width: 90%; height: 90%" >                       
+                    <h:panelGroup id="north" style="position: absolute; top: 15%; width: fit-content; max-width: 55%">
+                        <ui:include src="/subpages/north.xhtml"/>                                                                                   
+                    </h:panelGroup>     
+                    <h:form id="PictureShow" style="max-width: 100%" onclick="javascript:setPictureShowHRefs(#{indexBean.readMeOK})">
+                        <p:dock id="dock" transient="true" position="top" maxWidth="15" itemWidth="95" proximity="90"  halign="right">                    
+                            <p:menuitem id="Jobs" title="Jobs" value="My Jobs" style="font-size: small; background-color: white" icon="/pictures/career.jpg" action="#{indexBean.startApps()}" update=":north :center" ></p:menuitem>                                        
+                            <p:menuitem id="Travels" title="Travels" value="Visited places" style="font-size: small; background-color: white" icon="/pictures/travels2.jpg" action="#{indexBean.startApps()}" update=":north :center"></p:menuitem>                            
+                        </p:dock>                    
+                    </h:form>    
+
+                </p:panel>           
             </p:layoutUnit>
-            <p:layoutUnit position="west" resizable="false" size="20%" minSize="180" style="background-color: lightskyblue;align-content: center" >                            
+            <p:layoutUnit position="west" resizable="false" size="20%" minSize="180" >                            
                 <h:form id="intro" title="Please choose one" style="text-align:center">   
-                        <p:menu toggleable="true" style="width: 95%" >  
-                            <p:menuitem value="Brief intro" action="#{indexBean.setCenterMenu(0)}" update=":center" style="color: darkblue;font-weight: bolder; font-size: x-large "></p:menuitem>                                                
-                            <p:submenu id="plans" expanded="false" label="Today and Plans">                                        
-                                <p:menuitem value="Who I am" style="color: blue" action="#{indexBean.setCenterMenu(1)}" update=":center"></p:menuitem>                            
-                                <p:menuitem value="Motivation" style="color: blue" action="#{indexBean.setCenterMenu(2)}" update=":center"></p:menuitem>                            
-                            </p:submenu>
-                            <p:submenu id="path" expanded="false" label="Career Path">                                        
-                                <p:menuitem value="Education" action="#{indexBean.setCenterMenu(3)}" update=":center"></p:menuitem>                            
-                                <p:menuitem value="Positions" action="#{indexBean.setCenterMenu(4)}" update=":center"></p:menuitem>                            
-                                <p:menuitem value="Projects" action="#{indexBean.setCenterMenu(5)}" update=":center"></p:menuitem>                            
-                            </p:submenu>        
-                            <p:submenu id="download" expanded="false" label="Apps &amp; Downloads" >            
-                                <p:menuitem id="pictShow" value="PictureShow App&amp;Code" style="color: blue" action="#{indexBean.setCenterMenu(6)}" update=":center"></p:menuitem>
-                                <p:menuitem id="JREDown" value="JRE Readme and Download" action="#{indexBean.menuJREOpen()}" update=":center :north"></p:menuitem>                                                                                            
-                                <p:menuitem id="Webpage" url="#" target="_blank" value="Webpage code download" onclick="return getFilesURLsQ('Are you sure to download the Webpage source code?')"></p:menuitem>                                                               
-                                <p:menuitem id="CV" url="#" value="CV download" onclick="return getFilesURLsQ('Are you sure to download the CV in docx?')"></p:menuitem>                                                               
-                            </p:submenu>
-                        </p:menu>                        
-                    </h:form>                    
+                    <p:menu toggleable="true" style="width: 95%" >  
+                        <p:menuitem value="Brief intro" action="#{indexBean.setCenterMenu(0)}" update=":center" style="color: darkblue;font-weight: bolder; font-size: x-large "></p:menuitem>                                                
+                        <p:submenu id="plans" expanded="false" label="Today and Plans">                                        
+                            <p:menuitem value="Who I am" style="color: blue" action="#{indexBean.setCenterMenu(1)}" update=":center"></p:menuitem>                            
+                            <p:menuitem value="Motivation" style="color: blue" action="#{indexBean.setCenterMenu(2)}" update=":center"></p:menuitem>                            
+                        </p:submenu>
+                        <p:submenu id="path" expanded="false" label="Career Path">                                        
+                            <p:menuitem value="Education" action="#{indexBean.setCenterMenu(3)}" update=":center"></p:menuitem>                            
+                            <p:menuitem value="Positions" action="#{indexBean.setCenterMenu(4)}" update=":center"></p:menuitem>                            
+                            <p:menuitem value="Projects" action="#{indexBean.setCenterMenu(5)}" update=":center"></p:menuitem>                            
+                        </p:submenu>        
+                        <p:submenu id="download" expanded="false" label="Apps &amp; Downloads" >            
+                            <p:menuitem id="pictShow" value="PictureShow App&amp;Code" style="color: blue" action="#{indexBean.setCenterMenu(6)}" update=":center"></p:menuitem>
+                            <p:menuitem id="JREDown" value="JRE Readme and Download" action="#{indexBean.menuJREOpen()}" update=":center :north"></p:menuitem>                                                                                            
+                            <p:menuitem id="Webpage" url="#" target="_blank" value="Webpage code - GitHub" onclick="return confirm('Are you sure to go to the Webpage source code?')"></p:menuitem>                                                               
+                            <p:menuitem id="CV" url="#" value="CV download" onclick="return confirm('Are you sure to download the CV in docx?')"></p:menuitem>                                                               
+                        </p:submenu>
+                    </p:menu>                        
+                </h:form>                    
             </p:layoutUnit>            
-            <p:layoutUnit position="center" resizable="false" style="align-content: center">
-                    <h:panelGroup id="center" style="width: 100%; height: 100%">
-                        <ui:include src="/subpages/#{indexBean.getCenterMenuName()}"/>                                                                                                                           
-                    </h:panelGroup>
+            <p:layoutUnit position="center" resizable="false">
+                <h:panelGroup id="center" style="width: 100%; height: 100%">
+                    <ui:include src="/subpages/#{indexBean.getCenterMenuName()}"/>                                                                                                                           
+                </h:panelGroup>
             </p:layoutUnit>            
         </p:layout>        
     </h:body>

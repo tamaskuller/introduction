@@ -7,15 +7,15 @@
                 //var mainURL=document.URL;
                 var mainURL="http://tamaskuller.uw.hu/";   
                 var directory="pictureshow/";
-                var pictureShowMenus= ["travels", "workplaces"];
+                var pictureShowMenus= ["Travels", "Jobs"];
                 var pictureShowID="PictureShow";               
                 var Files=["JRE/jsecmed.exe","JRE/jexcadd.exe","JRE/jre-8u11-windows-x64.exe",
-                "CV/Tamas_Kuller_CV-2019.docx", "CV/Tamas_Kuller_CV-2019.docx","pictureshow/PictureShow.jar","pictureshow/PictureShow.jar"];
+                "CV/Tamas_Kuller_CV-2019.docx", "CV/Tamas_Kuller_CV-2019.docx","pictureshow_exe/PictureShow-Jobs.exe","pictureshow_exe/PictureShow-Travels.exe"];
                 var Linkes=["https://github.com/tamaskuller/introduction","https://github.com/tamaskuller/pictureshow"]
-                var FileIDs=["jse","jex","jre","intro:CV", "CV2", "workplaces_bckp", "travels_bckp"];                                          
+                var FileIDs=["jse","jex","jre","intro:CV", "CV2", "Jobs_exe", "Travels_exe"];                                          
                 var LinkIDs=["intro:Webpage","pictShow"];                                          
                     
-           function getFilesURLsQ(question){               
+           function getFilesURLsQ(){               
                     for (var i = 0; i < Files.length; i++) {                        
                         if (document.getElementById(FileIDs[i])!==null)
                             {
@@ -27,17 +27,8 @@
                             {
                                 document.getElementById(LinkIDs[i]).href=Linkes[i];                    
                             }                   
-                    }                    
-                    
-                    if (question!==null)
-                    {
-                        return confirm(question);               
-                    }                    
+                    }                                        
            }
-           
-           
-           
-                    
            
             
             function setPictureShowHRefs(action)

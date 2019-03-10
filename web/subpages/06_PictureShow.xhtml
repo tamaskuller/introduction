@@ -5,19 +5,28 @@
       xmlns:p="http://primefaces.org/ui">
 
 
+
     <link rel="stylesheet" href="resources/css/default.css"></link>    
     <script type="text/javascript" src="scripts/indexfunct.js"></script>    
 
 
     <h1 align="center" style="background-color: white; font-size: x-large"><b>PictureShow Application</b>   </h1>       
 
-    <p:panel class="panScroll" style=" width: 85%; height: 80%;  margin: auto auto">
+    <p:panel class="panScroll" style=" width: 85%; height: 75%">
 
         <h4 class="colorLarge">Overview</h4>
         <p>
             PictureShow is a <b class="colorblue">Java Swing based app</b> using basic features of swing "window" and "component" classes.<br/>
             The app main functionalities are customly built on top of those.<br/>
-            Some highlights from those <span  class="colorblue">custom features</span> (see detailed list at the bottom Appendix):
+            <p>
+                You can download the desktop version of <a href="#showcases" class="linked">PictureShow samples below</a> in case of security problem with webstart (JNLP).<br/>
+                And here is the              
+                <a id="pictShow" href="#" target="_blank" class="linked" onclick="return confirm('Are you sure to download PictureShow source code?')" onmouseover="getFilesURLsQ()">
+                    PictureShow source code</a>                                                                       
+                on GitHub to dig deeper into it. <br/>                       
+            </p>
+            
+            Some highlights from the <span  class="colorblue">custom features</span> (see detailed list at the bottom Appendix):
             <ol>
                 <li><span  class="colorblue">Animated, ordered, multi-level, groupped, autosizing / auto-positioning</span> behaviour</li>
                 <li><span  class="colorblue">Show / hide button,  background image</span></li>
@@ -30,13 +39,6 @@
                 <li><b class="colorblue">Storage for pictures on a webserver or local path</b> (both works automatically based on installation)</li>                
                 <li>Can be <b class="colorblue">run from a usual webpage</b> using JNLP</li>
             </ol>        
-            <p>
-                You can download the samples from <a href="#showcases" style="color: blue"> below links</a> if direct launch with webstart (JNLP) doesn't work.<br/>
-                And You can download the              
-                <a id="pictShow" href="#" target="_blank" class="linked" onclick="return getFilesURLsQ('Are you sure to download PictureShow source code?')">
-                    PictureShow source code</a>                                                                       
-                from GitHub to dig deeper into. <br/>                       
-            </p>
 
         </p>
         <h4 class="colorLarge">What PictureShow can be used for?</h4>                       
@@ -49,8 +51,8 @@
         <p>
             <b id="showcases" class="colorblue">The two sample versions </b> (see the icons on the webpage top section) contains:
             <ol>
-                <li>My <a id="workplaces_bckp" class="linked" href="#" onclick="getFilesURLsQ('Are you sure to download PictureShow My Workplaces app?')" > career stops </a> with job positions</li>
-                <li>Countries, cities I've <a id="travels_bckp" class="linked" onclick="getFilesURLsQ('Are you sure to download PictureShow Visits app?')" href="#">visited </a> in my life (not only businesstrips)</li>
+                <li>My career stops with <span class="colorblue">Job</span> positions -> <a id="Jobs_exe" class="linked" href="#" onclick="return confirm('Are you sure to download PictureShow Jobs app?')" onmouseover="getFilesURLsQ()" >Download from here </a> if security blocks icons</li>
+                <li>Countries, cities I've <span class="colorblue">Visited</span> in my life (not only businesstrips) -> <a id="Travels_exe" class="linked" onclick="return confirm('Are you sure to download PictureShow Visits app?')" href="#" onmouseover="getFilesURLsQ()">Download from here </a> if security blocks icons</li>
             </ol>
         </p>
 
@@ -102,7 +104,6 @@
         </p>
 
     </p:panel>
-
 
 </html>
 

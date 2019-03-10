@@ -94,6 +94,8 @@ public class IndexBean implements Serializable{
         System.out.println("readok");
         readMeToRead=false;
         readMeOK=true;
+        setCenterMenu(6);   
+        
     }
     
    public void menuJREOpen()

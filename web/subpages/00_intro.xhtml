@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="resources/css/default.css"></link>    
     <script type="text/javascript" src="scripts/indexfunct.js"></script>    
 
-    <p:panel class="panScroll" style="width: 85%; height: 95%; margin: auto auto" >        
+    <p:panel class="panScroll" style="width: 85%; height: 95%" >        
         <table align="center">
             <tbody>
                 <tr valign="middle">                    
@@ -88,7 +88,7 @@
                 </p>
                 <p>
                     <li>Of course All of above 3 points can be saved in compact doc from
-                        <a id="CV2" href="#" class="linked" onclick="return getFilesURLsQ('Are you sure to download the CV in docx?')">
+                        <a id="CV2" href="#" class="linked" onclick="return confirm('Are you sure to download the CV in docx?')" onmouseover="getFilesURLsQ()">
                             CV Download</a>                                                           
                     </li>                
                 </p>
