@@ -8,7 +8,8 @@
     <c:if test="#{indexBean.readMeToRead}">
         <h5 align="center" style="background-color: white;opacity: 1; width: fit-content">     
             Please review the security readme below first. <br/>
-                Click on OK to confirm it and ACTIVATE the apps ICONS.    
+            Click on OK to confirm it. <br/> This will ACTIVATE the apps ICONS.
+            <b class="colorBlueLarge"> Please Click on the ICONS Again after OK.</b>
             <h:form onclick="javascript:setPictureShowHRefs(true)">
                 <p:commandButton value="OK" type="submit" action="#{indexBean.readOk()}" update=":north :center" />                                 
             </h:form>
@@ -16,8 +17,12 @@
     </c:if>
     <c:if test="#{indexBean.readMeToRead==false}">                
         <h3 id="HeaderText" align="left" style="background-color: white;font-size: x-large;opacity: 0.85; width: fit-content; border: 3px inset lightblue;" >
-                Java PictureShow app showcases (Click on icon) -> 
+                Java PictureShow app showcases 
+                <c:if test="#{indexBean.readMeOK==false}">                    
+                    (Click on icon to activate) -> 
+                </c:if>
                 <c:if test="#{indexBean.readMeOK==true}">
+                    (Click on icons to run) -> 
                     <div style="font-size: small; color: black">
                         The downloaded JNLP should be run to launch it. <br/>
                         Desktop versions are available on <p:commandLink update=":center" action="#{indexBean.setCenterMenu(6)}" style="color: blue; font-size: large"> PictureShow App&amp;Code</p:commandLink> tab.
