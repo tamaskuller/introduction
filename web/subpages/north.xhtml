@@ -7,11 +7,10 @@
 
     <c:if test="#{indexBean.readMeToRead}">
         <h5 align="center" style="background-color: white;opacity: 1; width: fit-content">     
-            Please review the security readme below first. <br/>
-            Click on OK to confirm it. <br/> This will ACTIVATE the apps ICONS.
-            <b class="colorBlueLarge"> Please Click on the ICONS Again after OK.</b>
+            You can find the security readme below. Click on OK to acknowledge it. <br/> 
+            This will ACTIVATE the ICONS and <b class="colorBlueLarge"> You can launch the Apps after the "OK".</b>
             <h:form onclick="javascript:setPictureShowHRefs(true)">
-                <p:commandButton value="OK" type="submit" action="#{indexBean.readOk()}" update=":north :center" />                                 
+                <p:commandButton style="color: blue; font-size: large; font-weight: bolder" value="OK" type="submit" action="#{indexBean.readOk()}" update=":north :center" />                                 
             </h:form>
         </h5>
     </c:if>
@@ -19,7 +18,7 @@
         <h3 id="HeaderText" align="left" style="background-color: white;font-size: x-large;opacity: 0.85; width: fit-content; border: 3px inset lightblue;" >
                 Java PictureShow app showcases 
                 <c:if test="#{indexBean.readMeOK==false}">                    
-                    (Click on icon to activate) -> 
+                    (Click on icon) -> 
                 </c:if>
                 <c:if test="#{indexBean.readMeOK==true}">
                     (Click on icons to run) -> 
