@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package controller;
-
-
-
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;

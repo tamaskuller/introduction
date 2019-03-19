@@ -20,10 +20,10 @@
                     <h:panelGroup id="north" style="position: absolute; top: 15%; width: fit-content; max-width: 55%">
                         <ui:include src="/subpages/north.xhtml"/>                                                                                   
                     </h:panelGroup>     
-                    <h:form id="PictureShow" style="max-width: 100%" onclick="#{indexBean.startApps()};javascript:setPictureShowHRefs(#{indexBean.readMeOK}); " >
+                    <h:form id="PictureShow" style="max-width: 100%" onmouseover="setPictureShowHRefs(#{indexBean.readMeOK});">
                         <p:dock id="dock" transient="true" position="top" maxWidth="15" itemWidth="95" proximity="90"  halign="right">                    
-                            <p:menuitem id="Travels" title="Travels" value="Visited places" style="font-size: small; background-color: white" icon="/pictures/travels2.jpg" oncomplete="if(#{indexBean.readMeToRead}){alert('Please review the security notes before launching the App');}" update=":north :center"></p:menuitem>                            
-                            <p:menuitem id="Jobs" title="Jobs" value="My Jobs" style="font-size: small; background-color: white" icon="/pictures/career.jpg" oncomplete="if(#{indexBean.readMeToRead}){alert('Please review the security notes before launching the App');}" update=":north :center" ></p:menuitem>                                                                    
+                            <p:menuitem id="Travels" title="Travels" value="Visited places" style="font-size: small; background-color: white" icon="/pictures/travels2.jpg" action="#{indexBean.startApps()}" update=":north :center"></p:menuitem>                            
+                            <p:menuitem id="Jobs" title="Jobs" value="My Jobs" style="font-size: small; background-color: white" icon="/pictures/career.jpg" action="#{indexBean.startApps()}" update=":north :center" ></p:menuitem>                                                                    
                         </p:dock>                    
                     </h:form>    
 

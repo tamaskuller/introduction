@@ -7,12 +7,17 @@
 
     <c:if test="#{indexBean.readMeToRead}">
         <h5 align="center" style="background-color: white;opacity: 1; width: fit-content">     
-            You can find the security readme below. Click on OK to acknowledge it. <br/> 
-            This will ACTIVATE the ICONS and <b class="colorBlueLarge"> You can launch the Apps after the "OK".</b>
-            <h:form onclick="javascript:setPictureShowHRefs(true)">
-                <p:commandButton style="color: blue; font-size: large; font-weight: bolder" value="OK" type="submit" action="#{indexBean.readOk()}" update=":north :center" />                                 
+            Please find the security readme in 
+            <b style="color: crimson; font-size: larger">"JRE Readme and Download" </b>  tab<br/>
+            Click on OK to acknowledge it. 
+            <b class="colorBlueLarge"> You can launch the Apps after the "OK".</b>
+            <h:form onclick="javascript:setPictureShowHRefs(true)" >
+                <p:commandButton style="color: blue; font-size: large; font-weight: bolder" value="OK" type="submit" action="#{indexBean.readOk()}"  update=":north :center" />                                 
             </h:form>
-        </h5>
+            <script>
+                alert('Please review the security notes before launching the App');
+            </script>                
+        </h5>        
     </c:if>
     <c:if test="#{indexBean.readMeToRead==false}">                
         <h3 id="HeaderText" align="left" style="background-color: white;font-size: x-large;opacity: 0.85; width: fit-content; border: 3px inset lightblue;" >
