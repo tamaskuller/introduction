@@ -16,7 +16,17 @@
         <br/><br/>
         <form onmouseover="javascript:getFilesURLsQ();"  >
 
-            <h3>1.) Install java 1.8.11 with "Medium" security level (RECOMMENDED choice):</h3><br/>
+            <h3>1.) Add this website to Java security exception list (Simpliest solution):</h3>             
+            <br/>
+            <a id="jex" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install exception adding tool?')">
+                Adjust Java security exception list </a> <span class="medium">(script works on Windows OS only)</span><br/>
+            In case when higher than 1.8.11 java version is installed on the PC                                   
+            <br/>
+            <span style="font-size: small">(Note! This helping file can give false virus alarm. You can use javaconf GUI (Java Control Panel) instead if you will)</span>
+            <br/>
+            <br/>            
+            
+            <h3>2.) Install java 1.8.11 with "Medium" security level:</h3><br/>
             <a id="jre" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install java 1.8.11?')">
                 Download and Install JRE 1.8.11 using this link</a>                                           
             <br/>
@@ -27,16 +37,8 @@
                 Change Java security level to Medium </a><span class="medium"> (script works on Windows OS only)</span><br/>                                        
             In case 1.8.11 was installed using the link above or before.
             <br/>
-            <span style="font-size: small">(Note! This helping file can give false virus alarm. You can use javaconf GUI instead if you will)</span>                 
-            <br/>
-            <br/>            
-            <h3>2.) Add this website to Java security exception list:</h3>             
-            <br/>
-            <a id="jex" href="#" class="linked" style="width: 50%; height: 70%" onclick="return confirm('Are you sure to install exception adding tool?')">
-                Adjust Java security exception list </a> <span class="medium">(script works on Windows OS only)</span><br/>
-            In case when higher v8 java is installed on the PC                                   
-            <br/>
-            <span style="font-size: small">(Note! This helping file can give false virus alarm. You can use javaconf GUI instead if you will)</span>
+            <span style="font-size: small">(Note! This helping file can give false virus alarm. You can use javaconf GUI (Java Control Panel) instead if you will)</span>                 
+            
 
         </form>                
     </p:panel>
