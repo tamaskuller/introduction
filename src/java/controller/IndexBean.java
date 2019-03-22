@@ -82,7 +82,10 @@ public class IndexBean implements Serializable{
     {
         System.out.println("startapps"+readMeOK);
         if (!readMeOK)   
-            menuJREOpen();
+            {
+            setReadMeToRead(true);        
+            menuJREOpen();            
+            }
             
     }
     
@@ -98,9 +101,7 @@ public class IndexBean implements Serializable{
    public void menuJREOpen()
    {
        System.out.println("menuJREOpen");
-       setCenterMenu(7);           
-       if (!readMeOK)
-            setReadMeToRead(true);        
+       setCenterMenu(7);                 
    }
         
     
