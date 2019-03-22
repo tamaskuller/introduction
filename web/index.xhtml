@@ -20,7 +20,7 @@
                     <h:panelGroup id="north" style="position: absolute; top: 15%; width: fit-content; max-width: 55%">
                         <ui:include src="/subpages/north.xhtml"/>                                                                                   
                     </h:panelGroup>     
-                    <h:form id="PictureShow" style="max-width: 100%" onmouseover="setPictureShowHRefs(#{indexBean.readMeOK});">
+                    <h:form id="PictureShow" style="max-width: 100%">
                         <p:dock id="dock" transient="true" position="top" maxWidth="15" itemWidth="95" proximity="90"  halign="right">                    
                             <p:menuitem id="Travels" title="Travels" value="Visited places" style="font-size: small; background-color: white" icon="/pictures/travels2.jpg" action="#{indexBean.startApps()}" update=":north :center"></p:menuitem>                            
                             <p:menuitem id="Jobs" title="Jobs" value="My Jobs" style="font-size: small; background-color: white" icon="/pictures/career.jpg" action="#{indexBean.startApps()}" update=":north :center" ></p:menuitem>                                                                    
@@ -44,7 +44,7 @@
                         </p:submenu>        
                         <p:submenu id="download" expanded="false" label="Apps &amp; Downloads" >            
                             <p:menuitem id="pictShow" value="PictureShow App&amp;Code" style="color: blue" action="#{indexBean.setCenterMenu(6)}" update=":center"></p:menuitem>
-                            <p:menuitem id="JREDown" value="JRE Readme and Download" action="#{indexBean.menuJREOpen()}" update=":center"></p:menuitem>                                                                                            
+                            <p:menuitem id="JREDown" value="JRE Readme and Download" action="#{indexBean.menuJREOpen()}" update=":north :center"></p:menuitem>                                                                                            
                             <p:menuitem id="Webpage" url="#" target="_blank" value="Webpage code - GitHub" onclick="return confirm('Are you sure to go to the Webpage source code?')"></p:menuitem>                                                               
                             <p:menuitem id="CV" url="#" value="CV download" onclick="return confirm('Are you sure to download the CV in docx?')"></p:menuitem>                                                               
                         </p:submenu>
