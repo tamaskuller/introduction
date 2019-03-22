@@ -28,11 +28,10 @@
                                 document.getElementById(LinkIDs[i]).href=Linkes[i];                    
                             }                   
                     }                                        
-           }
-           
+           }           
             
             function setPictureShowHRefs(action)
-            {       
+            {                       
                 if (action)
                 {                
                     for (var i = 0; i < pictureShowMenus.length; i++) {                        
@@ -55,5 +54,4 @@
            function getMainURL()
            {
            return mainURL;}
-                 
            
