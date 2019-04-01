@@ -10,7 +10,7 @@
                 var pictureShowMenus= ["Travels", "Jobs"];
                 var pictureShowID="PictureShow";               
                 var Files=["JRE/jsecmed.exe","JRE/jexcadd.exe","JRE/jre-8u11-windows-x64.exe",
-                "CV/Tamas_Kuller_CV-2019-v2.docx", "CV/Tamas_Kuller_CV-2019-v2.docx","pictureshow_exe/PictureShow-Jobs.exe","pictureshow_exe/PictureShow-Travels.exe"];
+                "CV/Tamas_Kuller_CV-2019.pdf", "CV/Tamas_Kuller_CV-2019.pdf","pictureshow_exe/PictureShow-Jobs.exe","pictureshow_exe/PictureShow-Travels.exe"];
                 var Linkes=["https://github.com/tamaskuller/introduction","https://github.com/tamaskuller/pictureshow"]
                 var FileIDs=["jse","jex","jre","intro:CV", "CV2", "Jobs_exe", "Travels_exe"];                                          
                 var LinkIDs=["intro:Webpage","pictShow"];                                          
