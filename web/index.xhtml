@@ -46,7 +46,7 @@
                             <p:menuitem id="pictShow" value="PictureShow App&amp;Code" style="color: blue" action="#{indexBean.setCenterMenu(6)}" update=":center"></p:menuitem>
                             <p:menuitem id="JREDown" value="JRE Readme and Download" action="#{indexBean.menuJREOpen()}" update=":north :center"></p:menuitem>                                                                                            
                             <p:menuitem id="Webpage" url="#" target="_blank" value="Webpage code - GitHub" onclick="return confirm('Are you sure to go to the Webpage source code?')"></p:menuitem>                                                               
-                            <p:menuitem id="CV" url="#" value="CV download" onclick="return confirm('Are you sure to download the CV?')"></p:menuitem>                                                               
+                            <p:menuitem id="CV" url="#" value="CV download" target="_blank" onclick="return confirm('Are you sure to open the CV?')"></p:menuitem>                                                               
                         </p:submenu>
                     </p:menu>                        
                 </h:form>                    
